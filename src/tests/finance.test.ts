@@ -1,0 +1,1 @@
+import {describe,it,expect} from 'vitest';import {totals} from '../utils/finance';describe('finance totals',()=>{it('calculates balance',()=>{expect(totals([{id:'1',title:'a',amount:10,type:'income',category:'salary',date:'x'},{id:'2',title:'b',amount:3,type:'expense',category:'food',date:'x'}]).balance).toBe(7)})})

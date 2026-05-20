@@ -1,0 +1,1 @@
+import axios from 'axios';export async function convert(amount:number,from:string,to:string){try{const {data}=await axios.get(`https://open.er-api.com/v6/latest/${from}`);return Number((amount*(data.rates?.[to]??1)).toFixed(2))}catch{return Number((amount*0.92).toFixed(2))}}
